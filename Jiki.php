@@ -99,7 +99,7 @@ function jikiRender($input,$args,$parser)
   }
   if(isset($args["jql"]))#allow override of JQL
   {
-    $jikiDataContainer["jql"] = $args["jql"];
+    $jikiDataContainer["jql"] = $parser->recursiveTagParse($args["jql"]);
   }
   else
   {
